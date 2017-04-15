@@ -1,0 +1,28 @@
+{
+    "name": "theme-qillqaq",
+    "displayName": "Qillqaq Theme",
+    "description": "A dark colorscheme for Visual Studio Code",
+    "version": "0.0.1",
+    "publisher": "xaver",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.10.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Qillqaq",
+                "uiTheme": "vs-dark",
+                "path": "./themes/qillqaq.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "replace-in-file": "^2.5.0",
+        "standard": "^10.0.2"
+    }
+}
