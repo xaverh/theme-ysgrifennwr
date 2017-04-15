@@ -1,10 +1,10 @@
 {
-    "name": "theme-qillqaq",
-    "displayName": "Qillqaq Theme",
-    "description": "A dark colorscheme for Visual Studio Code",
+    "name": "theme-ysgrifennwr",
+    "displayName": "Ysgrifennwr Theme",
+    "description": "A light colorscheme for Visual Studio Code",
     "version": "0.0.1",
     "publisher": "xaver",
-    "license": "MIT",
+    "license": "BSD-3-Clause",
     "engines": {
         "vscode": "^1.10.0"
     },
@@ -14,9 +14,9 @@
     "contributes": {
         "themes": [
             {
-                "label": "Qillqaq",
+                "label": "Ysgrifennwr",
                 "uiTheme": "vs-dark",
-                "path": "./themes/qillqaq.json"
+                "path": "./themes/ysgrifennwr.json"
             }
         ]
     },

@@ -3,14 +3,14 @@
 const replace = require('replace-in-file')
 
 /*
-# cp /opt/visual-studio-code/resources/app/extensions/theme-defaults/themes/dark_defaults.json qillqaq_defaults.json
-# cp /opt/visual-studio-code/resources/app/extensions/theme-defaults/themes/dark_plus.json qillqaq.json
-# cp /opt/visual-studio-code/resources/app/extensions/theme-defaults/themes/dark_vs.json qillqaq_vs.json
+# cp /opt/visual-studio-code/resources/app/extensions/theme-defaults/themes/dark_defaults.json ysgrifennwr_defaults.json
+# cp /opt/visual-studio-code/resources/app/extensions/theme-defaults/themes/dark_plus.json ysgrifennwr.json
+# cp /opt/visual-studio-code/resources/app/extensions/theme-defaults/themes/dark_vs.json ysgrifennwr_vs.json
 */
 
-const themeName = 'Qillqaq'
-const defaultsName = 'Qillqaq Default Colors'
-const baseName = 'Qillqaq Base'
+const themeName = 'Ysgrifennwr'
+const defaultsName = 'Ysgrifennwr Default Colors'
+const baseName = 'Ysgrifennwr Base'
 const blueLagoon = '#005577'
 const grey10 = '#1E1E1E'
 const deepCerise = '#E32791'
