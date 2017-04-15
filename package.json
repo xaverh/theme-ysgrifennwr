@@ -21,8 +21,10 @@
         ]
     },
     "devDependencies": {
-        "gulp": "^3.9.1",
-        "replace-in-file": "^2.5.0",
-        "standard": "^10.0.2"
+        "standard": "^10.0.2",
+        "replace-in-file": "^2.5.0"
+    },
+    "scripts": {
+        "prepublish": "node create.js"
     }
 }
