@@ -1,6 +1,6 @@
 {
 	"$schema": "vscode://schemas/color-theme",
-	"name": "Dark+ (default dark)",
+	"name": "Qillqaq",
 	"include": "./dark_vs.json",
 	"tokenColors": [
 		{
@@ -11,7 +11,7 @@
 				"support.constant.handlebars"
 			],
 			"settings": {
-				"foreground": "#DCDCAA"
+				"foreground": "#E3C472"
 			}
 		},
 		{
@@ -42,7 +42,7 @@
 				"storage.type.primitive.groovy"
 			],
 			"settings": {
-				"foreground": "#4EC9B0"
+				"foreground": "#81D8D0"
 			}
 		},
 		{
@@ -57,14 +57,14 @@
 				"entity.other.inherited-class"
 			],
 			"settings": {
-				"foreground": "#4EC9B0"
+				"foreground": "#81D8D0"
 			}
 		},
 		{
 			"name": "Control flow keywords",
 			"scope": "keyword.control",
 			"settings": {
-				"foreground": "#C586C0"
+				"foreground": "#E32791"
 			}
 		},
 		{
@@ -75,7 +75,7 @@
 				"support.variable"
 			],
 			"settings": {
-				"foreground": "#9CDCFE"
+				"foreground": "#E59FDF"
 			}
 		},
 		{
@@ -85,7 +85,7 @@
 				"meta.object-literal.key entity.name.function"
 			],
 			"settings": {
-				"foreground": "#9CDCFE"
+				"foreground": "#E59FDF"
 			}
 		},
 		{
@@ -100,7 +100,7 @@
 				"support.constant.color"
 			],
 			"settings": {
-				"foreground": "#CE9178"
+				"foreground": "#30C798"
 			}
 		}
 	]
