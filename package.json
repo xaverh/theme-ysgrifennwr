@@ -15,14 +15,14 @@
         "themes": [
             {
                 "label": "Ysgrifennwr",
-                "uiTheme": "vs-dark",
+                "uiTheme": "vs",
                 "path": "./themes/ysgrifennwr.json"
             }
         ]
     },
     "devDependencies": {
-        "standard": "^10.0.2",
-        "replace-in-file": "^2.5.0"
+        "replace-in-file": "^2.5.0",
+        "standard": "^10.0.2"
     },
     "scripts": {
         "prepublish": "node create.js"
