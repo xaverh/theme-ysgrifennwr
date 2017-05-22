@@ -16,11 +16,12 @@
 		"panelTitle.inactiveForeground": "#a6a5a3",
 		"sideBar.background": "#f9f8f4db",
 		"activityBar.foreground": "#424242",
-		"activityBar.background": "#f9f8f4",
+		"activityBar.background": "#edece8",
 		"list.activeSelectionBackground": "#00557780",
 		"list.dropBackground": "#00557780",
 		"list.focusBackground": "#00557780",
 		"activityBar.dropBackground": "#00557780",
+		"activityBarBadge.background": "#005577",
 		"editorGroup.dropBackground": "#00557780",
 		"statusBarItem.activeBackground": "#00557780"
 	},
