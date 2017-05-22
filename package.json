@@ -2,7 +2,7 @@
     "name": "theme-ysgrifennwr",
     "displayName": "Ysgrifennwr Theme",
     "description": "A light colorscheme for Visual Studio Code",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "publisher": "xaver",
     "license": "BSD-3-Clause",
     "engines": {
@@ -26,5 +26,6 @@
     },
     "scripts": {
         "prepublish": "node create.js"
-    }
+    },
+    "icon": "./icon.png"
 }

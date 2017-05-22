@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.1.3]
+### Added - 2017-05-22
+- screenshot and icon
+
 ## [0.1.2]
 ### Changed - 2017-05-22
 - terminal colors
