@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.1.5]
+### Added - 2017-05-25
+- titlebar
+
 ## [0.1.4]
 ### Fixed - 2017-05-22
 - screenshot and repo info
