@@ -1,0 +1,30 @@
+{
+	"$schema": "vscode://schemas/color-theme",
+	"type": "light",
+	"colors": {
+		"editor.background": "#f9f8f4", // bg
+		"terminal.ansiRed": "#e32791", // r
+		"terminal.ansiGreen": "#488432", // g
+		"terminal.ansiYellow": "#a25d0e", // y
+		"terminal.ansiBlue": "#2c65b5", // b
+		"terminal.ansiMagenta": "#b062a7", // m
+		"terminal.ansiCyan": "#27bbbe",
+		"terminal.ansiWhite": "#999999", // w
+		"terminal.ansiBrightBlack": "#b8b8b8", // kk
+		"terminal.ansiBrightRed": "#9f1b66",
+		"terminal.ansiBrightGreen": "#325d23", // gg
+		"terminal.ansiBrightYellow": "#71410a",
+		"terminal.ansiBrightBlue": "#1f477f", // bb
+		"terminal.ansiBrightMagenta": "#7b4474",
+		"terminal.ansiBrightCyan": "#1b8486", // cc
+		"editor.foreground": "#424242", // fg
+		"editorCursor.foreground": "#553a63",
+		"editor.selectionBackground": "#add6ff", //selbg
+		"editorError.foreground": "#ed2939", // error
+		"editorWarning.foreground": "#e9a700", // warning
+		"editorInfo.foreground": "#20bbfc", // info
+		"statusBar.background": "#0f3a4b", // uiBlue
+		"statusBar.noFolderBackground": "#553a63", // uiPurple
+		"statusBar.debuggingBackground": "#964f00" // uiOrange
+	}
+}
