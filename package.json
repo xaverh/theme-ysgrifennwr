@@ -1,39 +1,42 @@
 {
-    "name": "theme-ysgrifennwr",
-    "displayName": "Ysgrifennwr Theme",
-    "description": "A light colorscheme for Visual Studio Code",
-    "version": "1.0.0",
-    "publisher": "xaver",
-    "license": "BSD-3-Clause",
-    "engines": {
-        "vscode": "^1.10.0"
-    },
-    "categories": [
-        "Themes"
-    ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "Ysgrifennwr",
-                "uiTheme": "vs",
-                "path": "./themes/custom-color-theme.json"
-            }
-        ]
-    },
-    "devDependencies": {
-        "replace-in-file": "^2.5.0",
-        "standard": "^10.0.2"
-    },
-    "scripts": {
-        "prepublish": "node create.js"
-    },
-    "icon": "icon.png",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/xaverh/theme-ysgrifennwr"
-    },
-    "galleryBanner": {
-        "color": "#27BBBE",
-        "theme": "light"
-    }
+	"name": "theme-ysgrifennwr",
+	"displayName": "Ysgrifennwr Theme",
+	"description": "A light colorscheme for Visual Studio Code",
+	"version": "1.99.0",
+	"publisher": "xaver",
+	"license": "BSD-3-Clause",
+	"engines": {
+		"vscode": "^1.10.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Ysgrifennwr 2",
+				"uiTheme": "vs",
+				"path": "./themes/test.json"
+			}
+		]
+	},
+	"devDependencies": {
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.10.0",
+		"eslint-plugin-prettier": "^3.1.2",
+		"prettier": "^1.19.1",
+		"replace-in-file": "^5.0.2"
+	},
+	"scripts": {
+		"prepublish": "node create.js"
+	},
+	"icon": "icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/xaverh/theme-ysgrifennwr"
+	},
+	"galleryBanner": {
+		"color": "#27BBBE",
+		"theme": "light"
+	}
 }
