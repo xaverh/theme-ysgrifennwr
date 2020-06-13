@@ -2,7 +2,7 @@
 	"name": "theme-ysgrifennwr",
 	"displayName": "Ysgrifennwr Theme",
 	"description": "A light colorscheme for Visual Studio Code",
-	"version": "1.99.0",
+	"version": "1.99.1",
 	"publisher": "xaver",
 	"license": "BSD-3-Clause",
 	"engines": {
@@ -28,7 +28,7 @@
 		"replace-in-file": "^5.0.2"
 	},
 	"scripts": {
-		"prepublish": "node create.js"
+		"vscode:prepublish": "node create.js"
 	},
 	"icon": "icon.png",
 	"repository": {
@@ -36,7 +36,8 @@
 		"url": "https://github.com/xaverh/theme-ysgrifennwr"
 	},
 	"galleryBanner": {
-		"color": "#27BBBE",
+		"color": "#add6ff",
 		"theme": "light"
-	}
+	},
+	"dependencies": {}
 }

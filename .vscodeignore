@@ -1,4 +1,5 @@
 .vscode/**
-create.js
+*.js
 .gitignore
-yarn.lock
+**/*.json
+!themes/test.json
