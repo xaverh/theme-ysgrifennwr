@@ -2,4 +2,5 @@
 *.js
 .gitignore
 **/*.json
-!themes/test.json
+!themes/qillqaq.json
+!themes/ysgrifennwr.json

@@ -2,7 +2,7 @@
 	"$schema": "vscode://schemas/color-theme",
 	"type": "light",
 	"colors": {
-		"editor.background": "#1e1e1e", // bg
+		"editor.background": "#171717", // bg
 		"terminal.ansiRed": "#e32791", // r
 		"terminal.ansiGreen": "#30c798", // g
 		"terminal.ansiYellow": "#e3c472", // y
