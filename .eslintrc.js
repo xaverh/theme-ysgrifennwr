@@ -5,6 +5,7 @@ module.exports = {
 		node: true
 	},
 	rules: {
-		'prettier/prettier': 'warn'
+		'prettier/prettier': 'off',
+		'no-unused-vars': 'warn'
 	}
 }

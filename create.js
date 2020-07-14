@@ -1,6 +1,6 @@
 'use strict'
 
-var light = true
+const light = true
 
 if (light) {
 	var bg = '#f9f8f4',
@@ -19,16 +19,19 @@ if (light) {
 		mm = '#7b4474',
 		cc = '#1b8486',
 		fg = '#424242',
-		cursor = '#553a63',
-		selbg = '#add6ff',
+		cursor = '#20bbfc',
+		selbg = '#baddff',
 		error = '#ed2939',
-		warning = '#e9a700',
-		info = '#20bbfc',
+		warning = '#c08a00',
+		info = '#1680ac',
 		uiBlue = '#0f3a4b',
 		uiPurple = '#553a63',
-		uiOrange = '#964f00'
+		uiOrange = '#964f00',
+		bg_med = '#dddbd7',
+		bg_low = '#edece8',
+		fg_inv = '#f9f8f4'
 } else {
-	bg = '#1e1e1e'
+	bg = '#171717'
 	r = '#e32791'
 	g = '#30c798'
 	y = '#e3c472'
@@ -44,7 +47,7 @@ if (light) {
 	mm = '#e5b6e1'
 	cc = '#a2dcd7'
 	fg = '#e5e6e6'
-	cursor = '#20bbfc'
+	cursor = '#ff7135'
 	selbg = '#0f3a4b'
 	error = '#ed2939'
 	warning = '#e9a700'
@@ -52,13 +55,12 @@ if (light) {
 	uiBlue = '#0f3a4b'
 	uiPurple = '#553a63'
 	uiOrange = '#522900'
+	bg_med = '#333333'
+	bg_low = '#131313'
+	fg_inv = '#e5e6e6'
 }
 
-var unfocusedBar = light ? '#edece8' : '#333'
-
-var nn1 = '#111111',
-	nn3 = '#333333',
-	nn4 = '#444444',
+var nn4 = '#444444',
 	nn5 = '#555555',
 	nn6 = '#666666'
 
@@ -66,13 +68,13 @@ var theme = {
 	$schema: 'vscode://schemas/color-theme',
 	type: light ? 'light' : 'dark',
 	colors: {
-		'activityBar.activeBorder': light ? bg : fg,
-		'activityBar.background': unfocusedBar,
-		'activityBar.dropBackground': fg + '1f',
+		'activityBar.activeBorder': fg,
+		'activityBar.background': bg_low + '7f',
+		'activityBar.dropBackground': selbg,
 		'activityBar.foreground': fg,
 		'activityBar.inactiveForeground': fg + '66',
 		'activityBarBadge.background': uiBlue,
-		'activityBarBadge.foreground': unfocusedBar,
+		'activityBarBadge.foreground': fg_inv,
 		'badge.foreground': fg,
 		'breadcrumb.background': bg,
 		'button.background': uiBlue,
@@ -101,8 +103,8 @@ var theme = {
 		'editorInfo.foreground': info,
 		'editorLightBulbAutoFix.foreground': uiBlue,
 		'editorLightBulb.foreground': warning,
-		'editorLineNumber.activeForeground': uiBlue,
-		'editorLineNumber.foreground': uiBlue + 'dd',
+		'editorLineNumber.activeForeground': w,
+		'editorLineNumber.foreground': kk,
 		'editorLink.activeForeground': b,
 		'editorMarkerNavigation.background': bg,
 		'editorMarkerNavigationError.background': error,
@@ -157,6 +159,7 @@ var theme = {
 		'merge.currentHeaderBackground': c + '80',
 		'merge.incomingContentBackground': b + '33',
 		'merge.incomingHeaderBackground': b + '80',
+		'minimap.background': bg + '55',
 		'minimap.errorHighlight': error + 'b3',
 		'minimap.findMatchHighlight': uiOrange,
 		'minimapGutter.addedBackground': g + '99',
@@ -169,12 +172,13 @@ var theme = {
 		'notificationsInfoIcon.foreground': info,
 		'notificationsWarningIcon.foreground': warning,
 		'panel.background': bg,
+		'sideBar.background': bg_low,
 		'statusBar.background': uiBlue,
 		'statusBar.debuggingBackground': uiOrange,
-		'statusBar.debuggingForeground': bg,
-		'statusBar.foreground': bg,
+		'statusBar.debuggingForeground': fg_inv,
+		'statusBar.foreground': fg_inv,
 		'statusBar.noFolderBackground': uiPurple,
-		'statusBar.noFolderForeground': bg,
+		'statusBar.noFolderForeground': fg_inv,
 		'symbolIcon.classForeground': uiOrange,
 		'symbolIcon.constructorForeground': uiPurple,
 		'symbolIcon.enumeratorForeground': uiOrange,
@@ -348,7 +352,7 @@ var theme = {
 		{
 			scope: 'markup.changed',
 			settings: {
-				foreground: nn3
+				foreground: bb
 			}
 		},
 		{
@@ -357,7 +361,7 @@ var theme = {
 				'punctuation.definition.list.begin.markdown'
 			],
 			settings: {
-				foreground: nn3
+				foreground: bb
 			}
 		},
 		{
@@ -393,7 +397,7 @@ var theme = {
 		{
 			scope: 'meta.structure.dictionary.key.python',
 			settings: {
-				foreground: nn3
+				foreground: bb
 			}
 		},
 		{
@@ -479,7 +483,7 @@ var theme = {
 				'support.constant.color'
 			],
 			settings: {
-				foreground: nn3
+				foreground: bb
 			}
 		},
 		{
@@ -498,7 +502,7 @@ var theme = {
 		{
 			scope: ['support.type.property-name.json'],
 			settings: {
-				foreground: nn3
+				foreground: bb
 			}
 		},
 		{
@@ -516,7 +520,7 @@ var theme = {
 		{
 			scope: 'keyword.operator',
 			settings: {
-				foreground: nn1
+				foreground: fg
 			}
 		},
 		{
@@ -554,7 +558,7 @@ var theme = {
 		{
 			scope: 'support.function.git-rebase',
 			settings: {
-				foreground: nn3
+				foreground: bb
 			}
 		},
 		{
@@ -685,7 +689,7 @@ var theme = {
 				'support.constant.color'
 			],
 			settings: {
-				foreground: nn3
+				foreground: bb
 			}
 		},
 		{

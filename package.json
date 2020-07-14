@@ -2,11 +2,11 @@
 	"name": "theme-ysgrifennwr",
 	"displayName": "Ysgrifennwr Theme",
 	"description": "A light colorscheme for Visual Studio Code",
-	"version": "1.99.1",
+	"version": "3.0",
 	"publisher": "xaver",
 	"license": "BSD-3-Clause",
 	"engines": {
-		"vscode": "^1.10.0"
+		"vscode": "^1.47.0"
 	},
 	"categories": [
 		"Themes"
@@ -14,16 +14,22 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "Ysgrifennwr 2",
+				"label": "Ysgrifennwr",
 				"uiTheme": "vs",
-				"path": "./themes/test.json"
+				"path": "./themes/ysgrifennwr.json"
+			},
+			{
+				"label": "Qillqaq",
+				"uiTheme": "vs-dark",
+				"path": "./themes/qillqaq.json"
 			}
 		]
 	},
 	"devDependencies": {
 		"eslint": "^6.8.0",
-		"eslint-config-prettier": "^6.10.0",
-		"eslint-plugin-prettier": "^3.1.2",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-prettier": "^3.1.4",
+		"jsonc-parser": "^2.3.0",
 		"prettier": "^1.19.1",
 		"replace-in-file": "^5.0.2"
 	},
