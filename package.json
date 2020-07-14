@@ -19,6 +19,11 @@
 				"path": "./themes/ysgrifennwr.json"
 			},
 			{
+				"label": "Ysgrifennwr Classic",
+				"uiTheme": "vs",
+				"path": "./themes/ysgrifennwr-classic.json"
+			},
+			{
 				"label": "Qillqaq",
 				"uiTheme": "vs-dark",
 				"path": "./themes/qillqaq.json"
