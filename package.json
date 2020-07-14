@@ -34,7 +34,7 @@
 		"replace-in-file": "^5.0.2"
 	},
 	"scripts": {
-		"vscode:prepublish": "node create.js"
+		"vscode:prepublish": "node normalize.js"
 	},
 	"icon": "icon.png",
 	"repository": {

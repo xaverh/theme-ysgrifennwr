@@ -47,4 +47,4 @@ Object.keys(bySettings.foreground).forEach(key => {
 
 theme.tokenColors = normalized
 
-console.log(JSON.stringify(theme))
+fs.writeFileSync('./normalized.json', JSON.stringify(theme))
