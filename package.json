@@ -27,6 +27,11 @@
 				"label": "Qillqaq",
 				"uiTheme": "vs-dark",
 				"path": "./themes/qillqaq.json"
+			},
+			{
+				"label": "Qillqaq Classic",
+				"uiTheme": "vs-dark",
+				"path": "./themes/qillqaq-classic.json"
 			}
 		]
 	},
