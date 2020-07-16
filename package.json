@@ -1,59 +1,72 @@
 {
-	"name": "theme-ysgrifennwr",
-	"displayName": "Ysgrifennwr Theme",
-	"description": "A light colorscheme for Visual Studio Code",
-	"version": "3.0.0",
-	"publisher": "xaver",
-	"license": "BSD-3-Clause",
-	"engines": {
-		"vscode": "^1.47.0"
-	},
-	"categories": [
-		"Themes"
-	],
-	"contributes": {
-		"themes": [
-			{
-				"label": "Ysgrifennwr",
-				"uiTheme": "vs",
-				"path": "./themes/ysgrifennwr.json"
-			},
-			{
-				"label": "Ysgrifennwr Classic",
-				"uiTheme": "vs",
-				"path": "./themes/ysgrifennwr-classic.json"
-			},
-			{
-				"label": "Qillqaq",
-				"uiTheme": "vs-dark",
-				"path": "./themes/qillqaq.json"
-			},
-			{
-				"label": "Qillqaq Classic",
-				"uiTheme": "vs-dark",
-				"path": "./themes/qillqaq-classic.json"
-			}
-		]
-	},
-	"devDependencies": {
-		"eslint": "^6.8.0",
-		"eslint-config-prettier": "^6.11.0",
-		"eslint-plugin-prettier": "^3.1.4",
-		"jsonc-parser": "^2.3.0",
-		"prettier": "^1.19.1",
-		"replace-in-file": "^5.0.2"
-	},
-	"scripts": {
-		"vscode:prepublish": "node normalize.js"
-	},
-	"icon": "icon.png",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/xaverh/theme-ysgrifennwr"
-	},
-	"galleryBanner": {
-		"color": "#add6ff",
-		"theme": "light"
-	},
-	"dependencies": {}
+  "name": "theme-ysgrifennwr",
+  "displayName": "Ysgrifennwr Theme",
+  "description": "A light colorscheme for Visual Studio Code",
+  "version": "3.0.0",
+  "publisher": "xaver",
+  "license": "BSD-3-Clause",
+  "engines": {
+    "vscode": "^1.47.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Ysgrifennwr",
+        "uiTheme": "vs",
+        "path": "./themes/ysgrifennwr.json"
+      },
+      {
+        "label": "Ysgrifennwr Classic",
+        "uiTheme": "vs",
+        "path": "./themes/ysgrifennwr-classic.json"
+      },
+      {
+        "label": "Inga Wurst",
+        "uiTheme": "vs",
+        "path": "./themes/inga-wurst.json"
+      },
+      {
+        "label": "Qillqaq",
+        "uiTheme": "vs-dark",
+        "path": "./themes/qillqaq.json"
+      },
+      {
+        "label": "Qillqaq Classic",
+        "uiTheme": "vs-dark",
+        "path": "./themes/qillqaq-classic.json"
+      },
+      {
+        "label": "Hans Wurst",
+        "uiTheme": "vs-dark",
+        "path": "./themes/hans-wurst.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jsonc-parser": "^2.3.0",
+    "prettier": "^2.0.5"
+  },
+  "scripts": {
+    "vscode:prepublish": "node normalize.js"
+  },
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xaverh/theme-ysgrifennwr"
+  },
+  "galleryBanner": {
+    "color": "#add6ff",
+    "theme": "light"
+  },
+  "dependencies": {}
 }
