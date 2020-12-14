@@ -1,0 +1,154 @@
+{
+  "name": "Inga Wurst",
+  "type": "light",
+  "colors": { "editor.background": "#f5f5f5", "editor.foreground": "#333333" },
+  "tokenColors": [
+    {
+      "scope": [
+        "comment",
+        "punctuation.definition.comment",
+        "meta.tag entity.other.attribute-name",
+        "entity.other.attribute-name.html",
+        "markup.italic"
+      ],
+      "settings": { "fontStyle": "italic" }
+    },
+    {
+      "scope": ["comment.block.preprocessor", "markup.inline.raw"],
+      "settings": { "fontStyle": "" }
+    },
+    {
+      "scope": [
+        "entity.name.function",
+        "support.function",
+        "entity.name.type",
+        "entity.other.inherited-class",
+        "support.class",
+        "entity.name.section",
+        "keyword.other.important",
+        "markup.bold"
+      ],
+      "settings": { "fontStyle": "bold" }
+    },
+    { "scope": ["markup.underline"], "settings": { "fontStyle": "underline" } },
+    {
+      "scope": [
+        "comment",
+        "punctuation.definition.comment",
+        "comment.block.preprocessor",
+        "meta.tag.sgml.doctype",
+        "meta.tag.sgml.doctype string",
+        "meta.tag.sgml.doctype entity.name.tag",
+        "meta.tag.sgml punctuation.definition.tag.html"
+      ],
+      "settings": { "foreground": "#AAAAAA" }
+    },
+    {
+      "scope": [
+        "comment.documentation",
+        "comment.block.documentation",
+        "string",
+        "meta.property-value",
+        "meta.property-value constant.other",
+        "support.constant.property-value",
+        "markup.italic",
+        "markup.bold"
+      ],
+      "settings": { "foreground": "#448C27" }
+    },
+    {
+      "scope": [
+        "invalid.illegal",
+        "entity.name.exception",
+        "markup.error",
+        "markup.traceback"
+      ],
+      "settings": { "foreground": "#660000" }
+    },
+    {
+      "scope": [
+        "keyword.operator",
+        "constant.character.escape",
+        "punctuation",
+        "markup.output",
+        "markup.raw",
+        "markup.prompt"
+      ],
+      "settings": { "foreground": "#777777" }
+    },
+    {
+      "scope": [
+        "keyword",
+        "storage",
+        "string.regexp",
+        "entity.name.tag",
+        "meta.link",
+        "markup.list"
+      ],
+      "settings": { "foreground": "#4B83CD" }
+    },
+    {
+      "scope": [
+        "storage.type",
+        "support.type",
+        "variable",
+        "support.variable",
+        "entity.name.type",
+        "entity.other.inherited-class",
+        "support.class",
+        "meta.selector",
+        "meta.selector entity",
+        "meta.selector entity punctuation",
+        "entity.name.tag.css",
+        "markup.quote"
+      ],
+      "settings": { "foreground": "#7A3E9D" }
+    },
+    {
+      "scope": [
+        "constant.language",
+        "support.constant",
+        "variable.language",
+        "constant.numeric",
+        "constant.character",
+        "constant",
+        "constant.other.symbol",
+        "constant.character.entity",
+        "punctuation.definition.entity",
+        "meta.property-name",
+        "support.type.property-name",
+        "markup.inline.raw"
+      ],
+      "settings": { "foreground": "#AB6526" }
+    },
+    {
+      "scope": ["entity.name.function", "support.function", "markup.heading"],
+      "settings": { "foreground": "#AA3731" }
+    },
+    {
+      "scope": [
+        "meta.tag",
+        "punctuation.definition.tag.html",
+        "punctuation.definition.tag.begin.html",
+        "punctuation.definition.tag.end.html",
+        "meta.tag entity.other.attribute-name",
+        "entity.other.attribute-name.html"
+      ],
+      "settings": { "foreground": "#91B3E0" }
+    },
+    {
+      "scope": ["markup.changed", "markup.deleted", "markup.inserted"],
+      "settings": { "foreground": "#000000" }
+    },
+    {
+      "scope": [
+        "meta.diff.range",
+        "meta.diff.index",
+        "meta.separator",
+        "meta.diff.header.from-file",
+        "meta.diff.header.to-file"
+      ],
+      "settings": { "foreground": "#434343" }
+    }
+  ]
+}

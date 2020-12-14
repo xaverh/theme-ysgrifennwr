@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="MyFontsWebfontsKit.css" />
+    <link rel="stylesheet" type="text/css" href="color.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body class="ysgrifennwr">
+    <nav>
+      <a href="#Ysgrifennwr">Ysgrifennwr</a> <a href="#Qillqaq">Qillqaq</a>
+      <a href="#FishChips">Fish &amp; Chips</a>
+    </nav>
+    <section id="samples">
+      <h2>C++</h2>
+      <pre class="sample" id="c++">
+/*
+    Copyright (C) 2004, 2005, 2006 Nikolas Zimmermann &lt;wildfox@kde.org>
+                  2004, 2005 Rob Buis &lt;buis@kde.org>
+                  2005 Eric Seidel &lt;eric@webkit.org>
+                  2010 Zoltan Herczeg &lt;zherczeg@webkit.org>
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Library General Public
+    License as published by the Free Software Foundation; either
+    version 2 of the License, or (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Library General Public License for more details.
+
+    You should have received a copy of the GNU Library General Public License
+    aint with this library; see the file COPYING.LIB.  If not, write to
+    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+    Boston, MA 02110-1301, USA.
+*/
+
+#ifndef THIRD_PARTY_BLINK_RENDERER_PLATFORM_GEOMETRY_FLOAT_POINT_3D_H_
+#define THIRD_PARTY_BLINK_RENDERER_PLATFORM_GEOMETRY_FLOAT_POINT_3D_H_
+
+#include "third_party/blink/renderer/platform/geometry/float_point.h"
+#include "third_party/blink/renderer/platform/wtf/allocator/allocator.h"
+#include "third_party/blink/renderer/platform/wtf/forward.h"
+#include "third_party/skia/include/core/SkPoint3.h"
+
+namespace gfx {
+class Point3F;
+}
+
+namespace blink {
+
+class PLATFORM_EXPORT FloatPoint3D {
+  DISALLOW_NEW();
+
+ public:
+  constexpr FloatPoint3D() : x_(0), y_(0), z_(0) {}
+
+  constexpr FloatPoint3D(float x, float y, float z) : x_(x), y_(y), z_(z) {}
+
+  constexpr FloatPoint3D(const FloatPoint&amp; p) : x_(p.X()), y_(p.Y()), z_(0) {}
+
+  constexpr FloatPoint3D(const FloatPoint3D&amp; p)
+      : x_(p.X()), y_(p.Y()), z_(p.Z()) {}
+
+  FloatPoint3D(const gfx::Point3F&amp;);
+
+  constexpr float X() const { return x_; }
+  void SetX(float x) { x_ = x; }
+
+  constexpr float Y() const { return y_; }
+  void SetY(float y) { y_ = y; }
+
+  constexpr float Z() const { return z_; }
+  void SetZ(float z) { z_ = z; }
+  void Set(float x, float y, float z) {
+    x_ = x;
+    y_ = y;
+    z_ = z;
+  }
+  void Move(float dx, float dy, float dz) {
+    x_ += dx;
+    y_ += dy;
+    z_ += dz;
+  }
+  void Scale(float sx, float sy, float sz) {
+    x_ *= sx;
+    y_ *= sy;
+    z_ *= sz;
+  }
+
+  constexpr bool IsZero() const { return !x_ &amp;&amp; !y_ &amp;&amp; !z_; }
+
+  void Normalize();
+
+  float Dot(const FloatPoint3D&amp; a) const {
+    return x_ * a.X() + y_ * a.Y() + z_ * a.Z();
+  }
+
+  // Compute the angle (in radians) between this and y.  If either vector is the
+  // zero vector, return an angle of 0.
+  float AngleBetween(const FloatPoint3D&amp; y) const;
+
+  // Sets this FloatPoint3D to the cross product of the passed two.
+  // It is safe for "this" to be the same as either or both of the
+  // arguments.
+  void Cross(const FloatPoint3D&amp; a, const FloatPoint3D&amp; b) {
+    float x = a.Y() * b.Z() - a.Z() * b.Y();
+    float y = a.Z() * b.X() - a.X() * b.Z();
+    float z = a.X() * b.Y() - a.Y() * b.X();
+    x_ = x;
+    y_ = y;
+    z_ = z;
+  }
+
+  // Convenience function returning "this cross point" as a
+  // stack-allocated result.
+  FloatPoint3D Cross(const FloatPoint3D&amp; point) const {
+    FloatPoint3D result;
+    result.Cross(*this, point);
+    return result;
+  }
+
+  float LengthSquared() const { return this->Dot(*this); }
+  float length() const { return sqrtf(LengthSquared()); }
+
+  float DistanceTo(const FloatPoint3D&amp; a) const;
+
+  operator SkPoint3() const { return SkPoint3::Make(x_, y_, z_); }
+  operator gfx::Point3F() const { return gfx::Point3F(x_, y_, z_); }
+
+  String ToString() const;
+
+ private:
+  float x_;
+  float y_;
+  float z_;
+};
+
+inline FloatPoint3D&amp; operator+=(FloatPoint3D&amp; a, const FloatPoint3D&amp; b) {
+  a.Move(b.X(), b.Y(), b.Z());
+  return a;
+}
+
+inline FloatPoint3D&amp; operator-=(FloatPoint3D&amp; a, const FloatPoint3D&amp; b) {
+  a.Move(-b.X(), -b.Y(), -b.Z());
+  return a;
+}
+
+constexpr FloatPoint3D operator+(const FloatPoint3D&amp; a, const FloatPoint3D&amp; b) {
+  return FloatPoint3D(a.X() + b.X(), a.Y() + b.Y(), a.Z() + b.Z());
+}
+
+constexpr FloatPoint3D operator-(const FloatPoint3D&amp; a, const FloatPoint3D&amp; b) {
+  return FloatPoint3D(a.X() - b.X(), a.Y() - b.Y(), a.Z() - b.Z());
+}
+
+constexpr bool operator==(const FloatPoint3D&amp; a, const FloatPoint3D&amp; b) {
+  return a.X() == b.X() &amp;&amp; a.Y() == b.Y() &amp;&amp; a.Z() == b.Z();
+}
+
+constexpr bool operator!=(const FloatPoint3D&amp; a, const FloatPoint3D&amp; b) {
+  return !(a == b);
+}
+
+inline float operator*(const FloatPoint3D&amp; a, const FloatPoint3D&amp; b) {
+  // dot product
+  return a.Dot(b);
+}
+
+inline FloatPoint3D operator*(float k, const FloatPoint3D&amp; v) {
+  return FloatPoint3D(k * v.X(), k * v.Y(), k * v.Z());
+}
+
+inline FloatPoint3D operator*(const FloatPoint3D&amp; v, float k) {
+  return FloatPoint3D(k * v.X(), k * v.Y(), k * v.Z());
+}
+
+inline float FloatPoint3D::DistanceTo(const FloatPoint3D&amp; a) const {
+  return (*this - a).length();
+}
+
+PLATFORM_EXPORT std::ostream&amp; operator&lt;&lt;(std::ostream&amp;, const FloatPoint3D&amp;);
+WTF::TextStream&amp; operator&lt;&lt;(WTF::TextStream&amp;, const FloatPoint3D&amp;);
+
+}  // namespace blink
+
+#endif  // THIRD_PARTY_BLINK_RENDERER_PLATFORM_GEOMETRY_FLOAT_POINT_3D_H_
+</pre
+      >
+      <h2>Vue.js</h2>
+      <pre class="sample" id="vue">
+&lt;template>
+  &lt;g
+    v-if="visible"
+    class="donut-module"
+    :class="{
+      hover
+    }"
+    :transform="`translate(-${size / 2}, -${size / 2}) rotate(${rotation}, ${size / 2}, ${size / 2})`"
+  >
+    &lt;g class="container">
+      &lt;path
+        ref="path"
+        class="progress"
+        :d="`M ${size / 2}, ${size / 2}
+        m 0, -${size / 2}
+        a ${size / 2},${size / 2} 0 1 1 0,${size}
+        a ${size / 2},${size / 2} 0 1 1 0,-${size}`"
+        :stroke-dasharray="`${finalDasharray - 0.25} ${finalDasharray - 0.25}`"
+        :stroke-dashoffset="finalDashoffset"
+        :stroke="stroke"
+      />
+    &lt;/g>
+
+    &lt;g
+      v-if="depth + 1 &lt; colors.length"
+      class="children"
+      :transform="`translate(${size / 2}, ${size / 2})`"
+    >
+      &lt;!-- eslint-disable vue/no-use-v-if-with-v-for  -->
+      &lt;DonutModule
+        v-for="m of module.children"
+        v-if="isVisible(getRatio(m, ratio))"
+        :key="m.id"
+        :module="m"
+        :depth="depth + 1"
+        :parent-module="module"
+        :parent-ratio="ratio"
+        :colors="colors"
+      />
+    &lt;/g>
+  &lt;/g>
+&lt;/template>
+
+&lt;script>
+import { mapGetters } from 'vuex'
+export default {
+  name: 'DonutModule',
+  inject: [
+    'WebpackAnalyzer'
+  ],
+  props: {
+    module: {
+      type: Object,
+      required: true
+    },
+    parentModule: {
+      type: Object,
+      default: undefined
+    },
+    depth: {
+      type: Number,
+      required: true
+    },
+    parentRatio: {
+      type: Number,
+      required: true
+    },
+    colors: {
+      type: Array,
+      required: true
+    }
+  },
+  data () {
+    return {
+      dasharray: 0
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'sizeField'
+    ]),
+    finalDasharray () {
+      return (this.finalDashoffset === 0 ||
+        this.finalDashoffset === this.dasharray * 2)
+        ? 0 : this.dasharray
+    },
+    finalDashoffset () {
+      if (this.ratio &lt; 0) {
+        return -this.dasharray * this.ratio + this.dasharray
+      } else {
+        return (1 - this.ratio) * this.dasharray
+      }
+    },
+    ratio () {
+      return this.getRatio(this.module, this.parentRatio)
+    },
+    rotation () {
+      return this.module.previousSize[this.sizeField] / this.parentModule.size[this.sizeField] * this.parentRatio * 360
+    },
+    size () {
+      return this.depth * 6.5 + 40
+    },
+    stroke () {
+      return this.colors[this.depth]
+    },
+    visible () {
+      return this.isVisible(this.ratio)
+    },
+    hover () {
+      return this.WebpackAnalyzer.hoverModule === this.module
+    }
+  },
+  mounted () {
+    if (this.visible) {
+      this.dasharray = this.$refs.path.getTotalLength()
+    }
+  },
+  methods: {
+    getRatio (module, parentRatio) {
+      return module.size[this.sizeField] / this.parentModule.size[this.sizeField] * parentRatio
+    },
+    isVisible (ratio) {
+      return ratio > 0.0025
+    }
+  }
+}
+&lt;/script>
+
+&lt;style lang="stylus" scoped>
+@import "~@vue/cli-ui/src/style/imports"
+path
+  fill none
+  stroke-width 3
+.hover > .container
+  path
+    stroke $vue-ui-color-warning
+&lt;/style>
+</pre
+      >
+      <h2>JavaScript</h2>
+      <pre class="sample" id="javascript">
+#!/usr/bin/env node
+
+/**
+ * @fileoverview Main CLI that is run via the eslint command.
+ * @author Nicholas C. Zakas
+ */
+
+/* eslint no-console:off */
+
+"use strict";
+
+// to use V8's code cache to speed up instantiation time
+require("v8-compile-cache");
+
+// must do this initialization *before* other requires in order to work
+if (process.argv.includes("--debug")) {
+    require("debug").enable("eslint:*,-eslint:code-path");
+}
+
+//------------------------------------------------------------------------------
+// Helpers
+//------------------------------------------------------------------------------
+
+/**
+ * Read data from stdin til the end.
+ *
+ * Note: See
+ * - https://github.com/nodejs/node/blob/master/doc/api/process.md#processstdin
+ * - https://github.com/nodejs/node/blob/master/doc/api/process.md#a-note-on-process-io
+ * - https://lists.gnu.org/archive/html/bug-gnu-emacs/2016-01/msg00419.html
+ * - https://github.com/nodejs/node/issues/7439 (historical)
+ *
+ * On Windows using `fs.readFileSync(STDIN_FILE_DESCRIPTOR, "utf8")` seems
+ * to read 4096 bytes before blocking and never drains to read further data.
+ *
+ * The investigation on the Emacs thread indicates:
+ *
+ * > Emacs on MS-Windows uses pipes to communicate with subprocesses; a
+ * > pipe on Windows has a 4K buffer. So as soon as Emacs writes more than
+ * > 4096 bytes to the pipe, the pipe becomes full, and Emacs then waits for
+ * > the subprocess to read its end of the pipe, at which time Emacs will
+ * > write the rest of the stuff.
+ * @returns {Promise&lt;string>} The read text.
+ */
+function readStdin() {
+    return new Promise((resolve, reject) => {
+        let content = "";
+        let chunk = "";
+
+        process.stdin
+            .setEncoding("utf8")
+            .on("readable", () => {
+                while ((chunk = process.stdin.read()) !== null) {
+                    content += chunk;
+                }
+            })
+            .on("end", () => resolve(content))
+            .on("error", reject);
+    });
+}
+
+/**
+ * Get the error message of a given value.
+ * @param {any} error The value to get.
+ * @returns {string} The error message.
+ */
+function getErrorMessage(error) {
+
+    // Lazy loading because those are used only if error happened.
+    const fs = require("fs");
+    const path = require("path");
+    const util = require("util");
+    const lodash = require("lodash");
+
+    // Foolproof -- thirdparty module might throw non-object.
+    if (typeof error !== "object" || error === null) {
+        return String(error);
+    }
+
+    // Use templates if `error.messageTemplate` is present.
+    if (typeof error.messageTemplate === "string") {
+        try {
+            const templateFilePath = path.resolve(
+                __dirname,
+                `../messages/${error.messageTemplate}.txt`
+            );
+
+            // Use sync API because Node.js should exit at this tick.
+            const templateText = fs.readFileSync(templateFilePath, "utf-8");
+            const template = lodash.template(templateText);
+
+            return template(error.messageData || {});
+        } catch {
+
+            // Ignore template error then fallback to use `error.stack`.
+        }
+    }
+
+    // Use the stacktrace if it's an error object.
+    if (typeof error.stack === "string") {
+        return error.stack;
+    }
+
+    // Otherwise, dump the object.
+    return util.format("%o", error);
+}
+
+/**
+ * Catch and report unexpected error.
+ * @param {any} error The thrown error object.
+ * @returns {void}
+ */
+function onFatalError(error) {
+    process.exitCode = 2;
+
+    const { version } = require("../package.json");
+    const message = getErrorMessage(error);
+
+    console.error(`
+Oops! Something went wrong! :(
+ESLint: ${version}
+${message}`);
+}
+
+//------------------------------------------------------------------------------
+// Execution
+//------------------------------------------------------------------------------
+
+(async function main() {
+    process.on("uncaughtException", onFatalError);
+    process.on("unhandledRejection", onFatalError);
+
+    // Call the config initializer if `--init` is present.
+    if (process.argv.includes("--init")) {
+        await require("../lib/init/config-initializer").initializeConfig();
+        return;
+    }
+
+    // Otherwise, call the CLI.
+    process.exitCode = await require("../lib/cli").execute(
+        process.argv,
+        process.argv.includes("--stdin") ? await readStdin() : null
+    );
+}()).catch(onFatalError);
+      </pre>
+    </section>
+  </body>
+</html>

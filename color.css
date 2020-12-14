@@ -1,0 +1,341 @@
+/* fg, bg defaults */
+
+.qillqaq {
+  background-color: #171717;
+  color: #e5e6e6;
+}
+
+.ysgrifennwr {
+  background-color: #f6f5f4;
+  color: #424242;
+}
+
+.fish\&chips {
+  background-color: #fff1e5;
+  color: #192126;
+}
+
+/* ANSI 16 */
+
+.qillqaq .K,
+#Graphite_Black {
+  color: #171717;
+}
+.ysgrifennwr .K,
+#Traffic_White {
+  color: #f6f5f4;
+}
+.fish\&chips .K,
+#FT {
+  color: #fff1e5;
+}
+
+.qillqaq .R,
+.ysgrifennwr .R,
+#Deep_Cerise {
+  color: #e32791;
+}
+.fish\&chips .R {
+  color: #cf191d;
+}
+
+.qillqaq .G,
+#Shamrock {
+  color: #30c798;
+}
+.ysgrifennwr .G,
+#La_Palma {
+  color: #488432;
+}
+.fish\&chips .G {
+  /* color: #9cd321; */
+  color: #008845;
+}
+
+.qillqaq .Y,
+#Chenin {
+  color: #e3c472;
+}
+.ysgrifennwr .Y,
+#Golden_Brown {
+  color: #a25d0e;
+}
+
+.qillqaq .B,
+#Cornflower_Blue {
+  color: #6796e6;
+}
+.ysgrifennwr .B,
+#Cerulean_Blue {
+  color: #2c65b5;
+}
+.fish\&chips .B {
+  color: #0f5499;
+}
+
+.qillqaq .M,
+#Plum {
+  color: #e59fdf;
+}
+.ysgrifennwr .M,
+#Violet_Blue {
+  color: #b062a7;
+}
+.fish\&chips .M {
+  color: #990f3d;
+}
+
+.qillqaq .C,
+#Tiffany {
+  color: #81d8d0;
+}
+.ysgrifennwr .C,
+#Light_Sea_Green {
+  color: #27bbbe;
+}
+.fish\&chips .C {
+  color: #0d7680;
+}
+
+.qillqaq .W,
+.ysgrifennwr .W,
+#Pearl_Light_Grey {
+  color: #999999;
+}
+.fish\&chips .W {
+  color: #736c67;
+}
+
+.qillqaq .k,
+#Dark_Grey {
+  color: #515151;
+}
+.ysgrifennwr .k,
+#Fortress_Grey {
+  color: #b8b8b8;
+}
+.fish\&chips .k {
+  color: #ccc1b7;
+}
+
+.qillqaq .r,
+#Hot_Pink {
+  color: #e466ad;
+}
+.ysgrifennwr .r,
+#Jazzberry_Jam {
+  color: #9f1b66;
+}
+
+.qillqaq .g,
+#Medium_Aquamarine {
+  color: #6cd1b2;
+}
+.ysgrifennwr .g,
+#Parsley {
+  color: #325d23;
+}
+
+.qillqaq .y,
+#Double_Colonia_White {
+  color: #e4cf98;
+}
+.ysgrifennwr .y,
+#Raw_Umber {
+  color: #71410a;
+}
+
+.qillqaq .b,
+#Jordy_Blue {
+  color: #91b0e6;
+}
+.ysgrifennwr .b,
+#Bahama_Blue {
+  color: #1f477f;
+}
+
+.qillqaq .m,
+#French_Lilac {
+  color: #e5b6e1;
+}
+.ysgrifennwr .m,
+#Eminence {
+  color: #7b4474;
+}
+
+.qillqaq .c,
+#Sinbad {
+  color: #a2dcd7;
+}
+.ysgrifennwr .c,
+#Atoll {
+  color: #1b8486;
+}
+
+.qillqaq .w,
+.qillqaq,
+#Code_Grey {
+  color: #e5e6e6;
+}
+.ysgrifennwr .w,
+.ysgrifennwr,
+#Meaning_of_Everything_Grey {
+  color: #424242;
+}
+.fish\&chips .w,
+.fish\&chips {
+  color: #192126;
+}
+
+/* Shades */
+
+.qillqaq .J,
+#Umbra_Grey {
+  color: #333333;
+}
+.ysgrifennwr .J,
+#Signal_White {
+  color: #edece8;
+}
+.fish\&chips .J,
+#Sugar_Milk {
+  color: #fff9f5;
+}
+
+.qillqaq .L,
+#Jet_Black {
+  color: #131313;
+}
+.ysgrifennwr .L,
+#Skitching {
+  color: #dcdad7;
+}
+.fish\&chips .L,
+#Papaya_Whip {
+  color: papayawhip;
+}
+
+.fish\&chips .x {
+  color: black;
+}
+
+.fish\&chips .v {
+  color: #262a33;
+}
+/* UI */
+
+.qillqaq .X,
+#Burnt_Orange {
+  color: #ff7135;
+}
+
+.qillqaq .Q,
+#Cyprus {
+  color: #0f3a4b;
+}
+.qillqaq .q,
+#Giesing_Blue {
+  color: #5aaadf;
+}
+.qillqaq .P,
+#Love_Symbol_\#2 {
+  color: #553a63;
+}
+.qillqaq .O,
+#Baker\'s_Chocolate {
+  color: #522900;
+}
+.qillqaq .I,
+#Cerulean {
+  color: #1680ac;
+}
+.qillqaq .E,
+#Alizarin {
+  color: #ed2939;
+}
+.qillqaq .A,
+#Gamboge {
+  color: #e9a700;
+}
+
+.ysgrifennwr .X,
+#Onahau {
+  color: #baddff;
+}
+
+.ysgrifennwr .Q,
+#Cyprus {
+  color: #0f3a4b;
+}
+.ysgrifennwr .q,
+#Yves_Klein {
+  color: #002fa7;
+}
+.ysgrifennwr .P,
+#Love_Symbol_\#2 {
+  color: #553a63;
+}
+.ysgrifennwr .O,
+#Saddle_Brown {
+  color: #964f00;
+}
+.ysgrifennwr .I,
+#Deep_Sky_Blue {
+  color: #20bbfc;
+}
+.ysgrifennwr .E,
+#Swiss {
+  color: #e11a27;
+}
+.ysgrifennwr .A,
+#Dark_Goldenrod {
+  color: #c08a00;
+}
+
+.fish\&chips .A {
+  color: #ffec1a;
+}
+
+.fish\&chips .P {
+  color: #553a63;
+}
+
+.fish\&chips .Q {
+  color: #0a5e66;
+}
+
+.fish\&chips .I {
+  color: #cce6ff;
+}
+
+.fish\&chips .q,
+#Djunge_Love {
+  color: #affe69;
+}
+
+.fish\&chips,
+#UI_Text_Dark_Red {
+  color: #3a1929;
+}
+
+.fish\&chips .E {
+  color: #cc0000;
+}
+
+.fish\&chips #NN {
+  color: #ff767c;
+}
+
+.fish\&chips #NN2 {
+  color: #008845;
+}
+
+.fish\&chips #NN3 {
+  color: #f2dfce;
+}
+.fish\&chips #NN4 {
+  color: #f2e5da;
+}
+.fish\&chips #NN5 {
+  color: #faeadc;
+}

@@ -12,6 +12,3 @@ module.exports = {
     ecmaVersion: 2020,
   },
 }
-
-var a = Math.random() > 0.5 ? true : false
-if (a == f

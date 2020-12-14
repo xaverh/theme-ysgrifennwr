@@ -1,0 +1,17 @@
+h2,
+nav {
+  font-family: TeeFranklin-Bold;
+}
+
+nav {
+  text-transform: uppercase;
+}
+
+pre {
+  font-family: 'SF Mono', Consolas, monospace;
+  font-size: small;
+}
+
+section#samples {
+  display: flex;
+}

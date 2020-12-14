@@ -1,0 +1,28 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3936690, 2020-08-17T10:01:00-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: TeeFranklin-Bold by Suomi
+ * URL: https://www.myfonts.com/fonts/suomi/tee-franklin/bold/
+ * Copyright: Copyright (c) Suomi Type Foundry, Suomi Finland, 2001. All rights reserved.
+ * 
+ * 
+ * 
+ * © 2020 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3c11b2");
+  
+@font-face {
+  font-family: 'TeeFranklin-Bold';
+  src: url('webFonts/TeeFranklin-Bold/font.woff2') format('woff2'), url('webFonts/TeeFranklin-Bold/font.woff') format('woff');
+}
+
